@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 #include <Propietarios.h>
 #include <PropietariosController.h>
 
