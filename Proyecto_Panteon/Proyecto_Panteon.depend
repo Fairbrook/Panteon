@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1572971254 source:e:\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
+	"Propietarios.h"
+	<string.h>
+	<iostream>
+
+1572972272 e:\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
+	<iostream>
+	<string.h>
+
+1572972148 source:e:\poyecto seminario programacion\proyecto_panteon\main.cpp
+	<iostream>
+	<Propietarios.h>
+
+1573163660 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
+	<iostream>
+	<Propietarios.h>
+	<PropietariosController.h>
+
+1573085619 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
+	<iostream>
+	<string.h>
+
+1573157033 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
+	"Propietarios.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<typeinfo>
+
+1573084078 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
+	<iostream>
+	<Propietarios.h>
+	<PropietariosController.h>
+
+1573085619 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
+	<iostream>
+	<string.h>
+
+1573085619 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
+	"Propietarios.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<typeinfo>
+
+1573085711 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
+	"PropietariosController.h"
+	"fstream"
+	"iomanip"
+
+1573084028 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
+	"Propietarios.h"
+
+1573163660 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
+	"Propietarios.h"
+
+1573161365 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
+	"PropietariosController.h"
+	"fstream"
+	"iomanip"
+
