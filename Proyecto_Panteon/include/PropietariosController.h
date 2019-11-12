@@ -8,15 +8,17 @@ class PropietariosController
         PropietariosController();
         virtual ~PropietariosController();
         void create();
-        Propietarios*read();
+        Propietarios* read();
         void print();
         void update();
         void del();
+        Propietarios searchCurp(char*);
 
     protected:
 
     private:
         int lastCont;
+        char fileName[20];
 
 };
 

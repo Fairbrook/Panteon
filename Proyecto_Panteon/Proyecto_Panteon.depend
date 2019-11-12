@@ -12,16 +12,16 @@
 	<iostream>
 	<Propietarios.h>
 
-1573163660 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
+1573581191 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
 	<iostream>
 	<Propietarios.h>
 	<PropietariosController.h>
 
-1573085619 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
+1573580596 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
 	<iostream>
 	<string.h>
 
-1573157033 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
+1573580813 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
 	"Propietarios.h"
 	<string.h>
 	<iostream>
@@ -52,10 +52,10 @@
 1573084028 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
 	"Propietarios.h"
 
-1573163660 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
+1573579170 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
 	"Propietarios.h"
 
-1573161365 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
+1573581158 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
 	"PropietariosController.h"
 	"fstream"
 	"iomanip"

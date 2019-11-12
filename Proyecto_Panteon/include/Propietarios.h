@@ -20,6 +20,7 @@ class Propietarios
         short int getEdad();
         void _read(char*);
         char* _write();
+        bool isNull();
         friend std::ostream& operator<< (std::ostream& os, const Propietarios& p);
         friend std::istream& operator>> (std::istream& is, Propietarios& p);
 

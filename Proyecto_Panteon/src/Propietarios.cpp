@@ -6,7 +6,7 @@
 
 Propietarios::Propietarios()
 {
-    //ctor
+    strcpy(this->Curp,"none");
 }
 
 Propietarios::~Propietarios()
@@ -45,6 +45,7 @@ std::ostream& operator<< (std::ostream& os, const Propietarios& p){
 }
 
 std::istream& operator>> (std::istream& is, Propietarios& p){
+    std::cin.ignore(100,'\n');
     std::cout << "Introduzca el Nombre: ";
     std::cin.getline(p.Nombre,sizeof(p.Nombre));
     std::cout << "Introduzca el Curp: ";
@@ -93,4 +94,9 @@ void Propietarios::_read(char info[]){
 
     data = strtok(NULL,"|");
     this->Edad = atoi(data);
+}
+
+bool Propietarios::isNull(){
+    if(strcmp(this->Curp,"none")==0)return true;
+    else return false;
 }
