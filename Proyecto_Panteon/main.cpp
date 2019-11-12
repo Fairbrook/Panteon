@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <Propietarios.h>
 #include <PropietariosController.h>
-
+#include <Propiedades.h>
 int main()
 {
     short int opc;
