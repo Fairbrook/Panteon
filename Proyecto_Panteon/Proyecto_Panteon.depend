@@ -91,3 +91,11 @@
 	<iostream>
 	<string.h>
 
+1573605968 source:c:\users\josh\documents\github\panteon\proyecto_panteon\src\propiedades.cpp
+	"Propiedades.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<typeinfo>
+
