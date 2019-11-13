@@ -34,9 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Propiedades.h" />
+		<Unit filename="include/PropiedadesController.h" />
 		<Unit filename="include/Propietarios.h" />
 		<Unit filename="include/PropietariosController.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Propiedades.cpp" />
+		<Unit filename="src/PropiedadesController.cpp" />
 		<Unit filename="src/Propietarios.cpp" />
 		<Unit filename="src/PropietariosController.cpp" />
 		<Extensions>
