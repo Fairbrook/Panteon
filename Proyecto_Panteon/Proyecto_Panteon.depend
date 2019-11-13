@@ -60,12 +60,13 @@
 	"fstream"
 	"iomanip"
 
-1573600774 source:c:\users\josh\documents\github\panteon\proyecto_panteon\main.cpp
+1573616021 source:c:\users\josh\documents\github\panteon\proyecto_panteon\main.cpp
 	<iostream>
 	<stdlib.h>
 	<Propietarios.h>
 	<PropietariosController.h>
 	<Propiedades.h>
+	<PropiedadesController.h>
 
 1573594649 c:\users\josh\documents\github\panteon\proyecto_panteon\include\propietarios.h
 	<iostream>
@@ -98,4 +99,14 @@
 	<stdio.h>
 	<stdlib.h>
 	<typeinfo>
+
+1573614868 source:c:\users\josh\documents\github\panteon\proyecto_panteon\src\propiedadescontroller.cpp
+	"PropiedadesController.h"
+	"fstream"
+	"iomanip"
+	<stdio.h>
+	<stdlib.h>
+
+1573610167 c:\users\josh\documents\github\panteon\proyecto_panteon\include\propiedadescontroller.h
+	<Propiedades.h>
 
