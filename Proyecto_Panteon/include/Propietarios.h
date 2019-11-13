@@ -8,19 +8,23 @@ class Propietarios
     public:
         Propietarios();
         ~Propietarios();
+
         void setNombre(const char*);
         void setDomicilio(const char*);
         void setTelefono(const char*);
         void setCurp(const char*);
         void setEdad(short int);
+
         char* getNombre();
         char* getDomicilio();
         char* getTelefono();
         char* getCurp();
         short int getEdad();
+
         void _read(char*);
         char* _write();
         bool isNull();
+
         friend std::ostream& operator<< (std::ostream& os, const Propietarios& p);
         friend std::istream& operator>> (std::istream& is, Propietarios& p);
 

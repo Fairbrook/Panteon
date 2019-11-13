@@ -60,15 +60,18 @@
 	"fstream"
 	"iomanip"
 
-1573616021 source:c:\users\josh\documents\github\panteon\proyecto_panteon\main.cpp
+1573625669 source:c:\users\josh\documents\github\panteon\proyecto_panteon\main.cpp
 	<iostream>
 	<stdlib.h>
+	<stdio.h>
 	<Propietarios.h>
 	<PropietariosController.h>
 	<Propiedades.h>
 	<PropiedadesController.h>
+	<Difuntos.h>
+	<DifuntosController.h>
 
-1573594649 c:\users\josh\documents\github\panteon\proyecto_panteon\include\propietarios.h
+1573622955 c:\users\josh\documents\github\panteon\proyecto_panteon\include\propietarios.h
 	<iostream>
 	<string.h>
 
@@ -109,4 +112,24 @@
 
 1573610167 c:\users\josh\documents\github\panteon\proyecto_panteon\include\propiedadescontroller.h
 	<Propiedades.h>
+
+1573624355 source:c:\users\josh\documents\github\panteon\proyecto_panteon\src\difuntos.cpp
+	"Difuntos.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<typeinfo>
+
+1573626052 c:\users\josh\documents\github\panteon\proyecto_panteon\include\difuntos.h
+	<iostream>
+	<string.h>
+
+1573625240 source:c:\users\josh\documents\github\panteon\proyecto_panteon\src\difuntoscontroller.cpp
+	"DifuntosController.h"
+	"fstream"
+	"iomanip"
+
+1573625170 c:\users\josh\documents\github\panteon\proyecto_panteon\include\difuntoscontroller.h
+	"Difuntos.h"
 
