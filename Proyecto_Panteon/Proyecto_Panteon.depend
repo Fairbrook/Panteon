@@ -12,53 +12,71 @@
 	<iostream>
 	<Propietarios.h>
 
-1573581191 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
+1573749293 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
 	<iostream>
+	<stdlib.h>
+	<stdio.h>
 	<Propietarios.h>
 	<PropietariosController.h>
+	<Propiedades.h>
+	<PropiedadesController.h>
+	<Difuntos.h>
+	<DifuntosController.h>
 
-1573580596 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
+1573739298 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
 	<iostream>
 	<string.h>
 
-1573580813 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
+1573747866 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
 	"Propietarios.h"
 	<string.h>
 	<iostream>
 	<stdio.h>
+	<stdlib.h>
 	<typeinfo>
 
-1573084078 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
+1573759904 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\main.cpp
 	<iostream>
+	<stdlib.h>
+	<stdio.h>
 	<Propietarios.h>
 	<PropietariosController.h>
+	<Propiedades.h>
+	<PropiedadesController.h>
+	<Difuntos.h>
+	<DifuntosController.h>
 
-1573085619 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
+1573739298 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarios.h
 	<iostream>
 	<string.h>
 
-1573085619 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
+1573747866 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarios.cpp
 	"Propietarios.h"
 	<string.h>
 	<iostream>
 	<stdio.h>
+	<stdlib.h>
 	<typeinfo>
 
-1573085711 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
+1573773680 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
 	"PropietariosController.h"
 	"fstream"
 	"iomanip"
+	"Propietarios.h"
+	"PropiedadesController.h"
 
-1573084028 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
+1573767987 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
 	"Propietarios.h"
 
 1573579170 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propietarioscontroller.h
 	"Propietarios.h"
 
-1573581158 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
+1573747953 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
 	"PropietariosController.h"
 	"fstream"
 	"iomanip"
+	"Propietarios.h"
+	"PropiedadesController.h"
 
 1573625669 source:c:\users\josh\documents\github\panteon\proyecto_panteon\main.cpp
 	<iostream>
@@ -132,4 +150,109 @@
 
 1573625170 c:\users\josh\documents\github\panteon\proyecto_panteon\include\difuntoscontroller.h
 	"Difuntos.h"
+
+1573748239 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propiedades.h
+	<iostream>
+	<string.h>
+	<Propietarios.h>
+
+1573743316 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propiedadescontroller.h
+	<Propiedades.h>
+	<Propietarios.h>
+
+1573748917 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\difuntos.h
+	<iostream>
+	<string.h>
+	<Propiedades.h>
+
+1573689692 c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\difuntoscontroller.h
+	"Difuntos.h"
+
+1573749218 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\difuntos.cpp
+	"Difuntos.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<Propiedades.h>
+	<PropiedadesController.h>
+
+1573739441 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\difuntoscontroller.cpp
+	"DifuntosController.h"
+	"fstream"
+	"iomanip"
+	"Difuntos.h"
+
+1573748192 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propiedadescontroller.cpp
+	"PropiedadesController.h"
+	"fstream"
+	"iomanip"
+	<stdio.h>
+	<stdlib.h>
+	<Propietarios.h>
+
+1573748294 source:c:\users\kevin\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propiedades.cpp
+	"Propiedades.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<Propietarios.h>
+	<PropietariosController.h>
+
+1573771976 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\difuntos.cpp
+	"Difuntos.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<Propiedades.h>
+	<PropiedadesController.h>
+	<DifuntosController.h>
+
+1573769311 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\difuntos.h
+	<iostream>
+	<string.h>
+	<Propiedades.h>
+
+1573748239 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propiedades.h
+	<iostream>
+	<string.h>
+	<Propietarios.h>
+
+1573772128 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\propiedadescontroller.h
+	<Propiedades.h>
+	<Propietarios.h>
+
+1573773090 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propiedades.cpp
+	"Propiedades.h"
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<Propietarios.h>
+	<PropietariosController.h>
+	<PropiedadesController.h>
+
+1573773358 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propiedadescontroller.cpp
+	"PropiedadesController.h"
+	"fstream"
+	"iomanip"
+	<stdio.h>
+	<stdlib.h>
+	<Propietarios.h>
+	<DifuntosController.h>
+	<Difuntos.h>
+	<PropietariosController.h>
+
+1573769379 c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\include\difuntoscontroller.h
+	"Difuntos.h"
+	"Propiedades.h"
+
+1573771993 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\difuntoscontroller.cpp
+	"DifuntosController.h"
+	"fstream"
+	"iomanip"
+	"Difuntos.h"
+	"PropiedadesController.h"
 

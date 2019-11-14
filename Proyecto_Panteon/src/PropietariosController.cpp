@@ -1,6 +1,8 @@
 #include "PropietariosController.h"
 #include "fstream"
 #include "iomanip"
+#include "Propietarios.h"
+#include "PropiedadesController.h"
 
 PropietariosController::PropietariosController()
 {
@@ -46,7 +48,6 @@ Propietarios* PropietariosController::read(){
     std::ifstream file(this->fileName);
     if(file.fail()){
         this->lastCont = 0;
-        std::cout << "No hay datos" << std::endl;
         return result;
     }
     while(!file.eof()){
@@ -83,9 +84,20 @@ void PropietariosController::print(){
     }
     for(int i = 0; i< this->lastCont; i++){
         std::cout << std::endl;
-        std::cout << i << ")" << std::endl;
+        std::cout << i+1 << "->" << std::endl;
         std::cout << data[i] << std::endl;
     }
+}
+
+bool PropietariosController::updateBy(Propietarios p){
+    Propietarios* data = this->read();
+    std::ofstream file(this->fileName);
+    for(int i = 0; i< this->lastCont; i++){
+        if(data[i]==p)file << p._write();
+        else file << data[i]._write();
+    }
+    file.close();
+    return true;
 }
 
 void PropietariosController::update(){
@@ -93,7 +105,6 @@ void PropietariosController::update(){
     short int edad;
     short int opc;
     char cadena[80];
-    Propietarios* data = this->read();
 
     std::cout << "Introduzca la curp del propietario a modificar: " ;
     std::cin >>curp;
@@ -144,12 +155,7 @@ void PropietariosController::update(){
             break;
     }
 
-    std::ofstream file(this->fileName);
-
-    for(int i = 0; i< this->lastCont; i++){
-        file << p._write();
-    }
-    file.close();
+    this->updateBy(p);
     std::cout << "Cambios guardados" << std::endl;
 
 }
@@ -169,11 +175,16 @@ void PropietariosController::del(){
     }
 
     std::cout << "\n\nElemento seleccionado: \n" << p;
-    std::cout << "\nRealmente desea eliminarlo?(s/n) ";
+    std::cout << "\nTodos los datos seran borrados\nRealmente desea eliminarlo?(s/n) ";
     std::cin>>opc;
     std::cin.ignore(1000,'\n');
 
     if(opc=='s'){
+        PropiedadesController propiedadesCntl;
+        Propiedades* propiedades = propiedadesCntl.searchByPropietario(p);
+        for(int i=0; i < propiedadesCntl.getLastCont();i++){
+                propiedadesCntl.deleteBy(propiedades[i]);
+        }
         std::ofstream file(this->fileName);
         for(int i = 0; i< this->lastCont; i++){
             if(strcasecmp(data[i].getCurp(),curp)!=0)

@@ -1,6 +1,7 @@
 #ifndef DIFUNTOSCONTROLLER_H
 #define DIFUNTOSCONTROLLER_H
 #include "Difuntos.h"
+#include "Propiedades.h"
 
 class DifuntosController
 {
@@ -12,10 +13,15 @@ class DifuntosController
         void print();
         void update();
         void del();
+        bool deleteBy(Difuntos);
         Difuntos searchID (int);
+        Difuntos* searchByPropiedad(Propiedades);
+        int getLastCont();
+        bool updateBy(Difuntos);
 
     private:
         int lastCont;
+        int lastContPropiedades;
         char fileName[20];
 };
 

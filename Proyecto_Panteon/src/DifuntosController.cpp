@@ -1,6 +1,8 @@
 #include "DifuntosController.h"
 #include "fstream"
 #include "iomanip"
+#include "Difuntos.h"
+#include "PropiedadesController.h"
 
 DifuntosController::DifuntosController()
 {
@@ -12,11 +14,17 @@ DifuntosController::~DifuntosController()
     //dtor
 }
 
+int DifuntosController::getLastCont(){return this->lastContPropiedades;}
+
 void DifuntosController::create(){
     Difuntos p;
     std::cin>>p;
     std::ifstream test(this->fileName);
     std::ofstream* file;
+    if(p.isNull()||p.getPropiedad().isNull()){
+        std::cout << "Elemento no guardado" << std::endl;
+        return;
+    }
     if(test.fail()){
         test.close();
         file = new std::ofstream(this->fileName);
@@ -27,16 +35,12 @@ void DifuntosController::create(){
     }
     else{
         test.close();
-        Difuntos prueba = this->searchID(p.getID());
-        if(prueba.isNull()){
-            file = new std::ofstream(this->fileName,std::ios::app);
-            *file << p._write();
-            file->close();
-            std::cout << "Agregado Correctamente" << std::endl;
-            return;
-        }
+        file = new std::ofstream(this->fileName,std::ios::app);
+        *file << p._write();
+        file->close();
+        std::cout << "Agregado Correctamente" << std::endl;
+        return;
     }
-    std::cout << "ID existente" << std::endl;
 }
 
 Difuntos* DifuntosController::read(){
@@ -46,7 +50,6 @@ Difuntos* DifuntosController::read(){
     std::ifstream file(this->fileName);
     if(file.fail()){
         this->lastCont = 0;
-        std::cout << "No hay datos" << std::endl;
         return result;
     }
     while(!file.eof()){
@@ -75,6 +78,27 @@ Difuntos DifuntosController::searchID(int id){
     return p;
 }
 
+Difuntos* DifuntosController::searchByPropiedad(Propiedades propiedad){
+    Difuntos* data = this->read();
+    Difuntos* result = NULL;
+    int cont = 0;
+    for(int i= 0; i < this->lastCont; i++){
+        if(data[i].getPropiedad() == propiedad)cont++;
+    }
+    this->lastContPropiedades = cont;
+
+    result = new Difuntos[cont];
+    cont = 0;
+
+    for(int i= 0; i < this->lastCont; i++){
+        if(data[i].getPropiedad()==propiedad){
+            result[cont] = data[i];
+            cont++;
+        }
+    }
+    return result;
+}
+
 void DifuntosController::print(){
     Difuntos* data = this->read();
     if(this->lastCont==0){
@@ -83,9 +107,20 @@ void DifuntosController::print(){
     }
     for(int i = 0; i< this->lastCont; i++){
         std::cout << std::endl;
-        std::cout << i << ")" << std::endl;
         std::cout << data[i] << std::endl;
     }
+    std::cout << std::endl;
+}
+
+bool DifuntosController::updateBy(Difuntos d){
+    Difuntos* data = this->read();
+    std::ofstream file(this->fileName);
+    for(int i = 0; i< this->lastCont; i++){
+        if(data[i]==d)file << d._write();
+        else file << data[i]._write();
+    }
+    file.close();
+    return true;
 }
 
 void DifuntosController::update(){
@@ -93,8 +128,11 @@ void DifuntosController::update(){
     short int opc;
     char cadena[80];
     Difuntos* data = this->read();
+    Propiedades aux;
+    PropiedadesController propiedadesCtl;
+    int idPropiedad;
 
-    std::cout << "Introduzca el ID del propietario a modificar: " ;
+    std::cout << "Introduzca el ID del difunto a modificar: " ;
     std::cin >>id;
 
     Difuntos p=this->searchID(id);
@@ -106,8 +144,8 @@ void DifuntosController::update(){
     std::cout << "\n\nElemento seleccionado: \n" << p;
     std::cout << "\n-- Seleccione la propiedad a actualizar --\n";
     std::cout << "[1]Nombre" << std::endl;
-    std::cout << "[2]ID" << std::endl;
-    std::cout << "[3]Fecha difuncion" << std::endl;
+    std::cout << "[2]Fecha difuncion" << std::endl;
+    std::cout << "[3]Propiedad" << std::endl;
     std::cout << "[0]Salir" << std::endl;
     std::cout << "Opcion: ";
     std::cin >> opc;
@@ -120,31 +158,52 @@ void DifuntosController::update(){
             p.setNombre(cadena);
             break;
         case 2:
-            std::cout << "Introduzca la nueva ID: ";
-            std::cin>>id;
-            p.setID(id);
-            break;
-        case 3:
             std::cout << "Introduzca la nueva Fecha: ";
             std::cin.getline(cadena,sizeof(cadena));
             p.setFecha(cadena);
             break;
+        case 3:
+            do{
+                std::cout << "Introduzca el numero de la propiedad: ";
+                std::cin >> idPropiedad;
+                if (std::cin.fail()){
+                    std::cin.clear();
+                    break;
+                }
+                aux = propiedadesCtl.searchN_propiedad(idPropiedad);
+                this->searchByPropiedad(aux);
+                if(aux==p.getPropiedad())break;
+                if(aux.getPredial()>0)
+                    std::cout << "\n**Error: Presenta adeudo en predial**\n\n";
+                else if(this->getLastCont()>=aux.getLimite_personas()){
+                    std::cout << "\n**Error: La propiedad seleccionada esta llena**\n\n";
+                }else{
+                    p.setPropiedad(aux);
+                    std::cout << aux.getN_propiedad();
+                    break;
+                }
+            }while(true);
+            break;
     }
 
-    std::ofstream file(this->fileName);
-
-    for(int i = 0; i< this->lastCont; i++){
-        file << p._write();
-    }
-    file.close();
+    this->updateBy(p);
     std::cout << "Cambios guardados" << std::endl;
 
+}
+
+bool DifuntosController::deleteBy(Difuntos difunto){
+    Difuntos* data = this->read();
+    std::ofstream file(this->fileName);
+    for(int i = 0; i< this->lastCont; i++){
+        if(data[i].getID()!=difunto.getID())
+            file << data[i]._write();
+    }
+    file.close();
 }
 
 void DifuntosController::del(){
     int id;
     char opc;
-    Difuntos* data = this->read();
 
     std::cout << "Introduzca la ID del propietario a eliminar: " ;
     std::cin >>id;
@@ -161,12 +220,7 @@ void DifuntosController::del(){
     std::cin.ignore(1000,'\n');
 
     if(opc=='s'){
-        std::ofstream file(this->fileName);
-        for(int i = 0; i< this->lastCont; i++){
-            if(data[i].getID()!=id)
-                file << data[i]._write();
-        }
-        file.close();
+        this->deleteBy(p);
         std::cout << "Cambios guardados" << std::endl;
     }else std::cout << "Operacion cancelada" << std::endl;
 

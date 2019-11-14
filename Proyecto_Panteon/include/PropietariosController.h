@@ -14,6 +14,7 @@ class PropietariosController
         void del();
         Propietarios searchCurp(char*);
 
+        bool updateBy(Propietarios);
     protected:
 
     private:

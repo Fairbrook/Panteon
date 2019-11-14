@@ -28,6 +28,9 @@ class Propietarios
         friend std::ostream& operator<< (std::ostream& os, const Propietarios& p);
         friend std::istream& operator>> (std::istream& is, Propietarios& p);
 
+        Propietarios operator= (Propietarios);
+        bool operator== (Propietarios);
+
     private:
         char Nombre[80];
         char Domicilio[80];

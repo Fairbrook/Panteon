@@ -46,7 +46,6 @@ std::ostream& operator<< (std::ostream& os, const Propietarios& p){
 }
 
 std::istream& operator>> (std::istream& is, Propietarios& p){
-    std::cin.ignore(100,'\n');
     std::cout << "Introduzca el Nombre: ";
     std::cin.getline(p.Nombre,sizeof(p.Nombre));
     std::cout << "Introduzca el Curp: ";
@@ -58,6 +57,7 @@ std::istream& operator>> (std::istream& is, Propietarios& p){
     std::cin >> p.Telefono;
     std::cout << "Introduzca la Edad: ";
     std::cin >> p.Edad;
+    std::cin.ignore(100,'\n');
     return is;
 }
 
@@ -100,4 +100,17 @@ void Propietarios::_read(char info[]){
 bool Propietarios::isNull(){
     if(strcmp(this->Curp,"none")==0)return true;
     else return false;
+}
+
+Propietarios Propietarios::operator= (Propietarios p){
+    strcpy(this->Nombre,p.Nombre);
+    strcpy(this->Curp,p.Curp);
+    strcpy(this->Domicilio,p.Domicilio);
+    strcpy(this->Telefono,p.Telefono);
+    this->Edad = p.Edad;
+    return *this;
+}
+
+bool Propietarios::operator== (Propietarios p){
+    return(strcasecmp(this->Curp,p.Curp)==0);
 }

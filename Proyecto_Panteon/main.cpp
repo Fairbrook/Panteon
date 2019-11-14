@@ -30,6 +30,7 @@ int main()
         std::cout << "[10]Salir" << std::endl;
         std::cout << "Seleccione una opcion: ";
         std::cin >> opc;
+        std::cin.ignore(100,'\n');
         switch(opc)
         {
         case 1:
@@ -43,7 +44,6 @@ int main()
             break;
 
         }
-        system("pause");
 
     }while(opc!=10);
 
@@ -55,6 +55,7 @@ void Menu_Propietarios()
 {
     short int opc;
     PropietariosController pController;
+    PropiedadesController propiedadesCntl;
     do{
         system("cls");
         std::cout << "--- Sistema Panteon --" << std::endl << std::endl;
@@ -68,6 +69,7 @@ void Menu_Propietarios()
         std::cout << "[10]Salir" << std::endl;
         std::cout << "Seleccione una opcion: ";
         std::cin >> opc;
+        std::cin.ignore(100,'\n');
         switch(opc){
             case 1:
                 pController.print();
@@ -78,10 +80,18 @@ void Menu_Propietarios()
                 break;
             case 3:{
                 char curp[80];
-                std::cout << std::endl << "Introduzca la curp a buscar"<<std::endl;
+                std::cout << std::endl << "Introduzca la curp a buscar: ";
                 std::cin >> curp;
                 Propietarios p = pController.searchCurp(curp);
-                if(!p.isNull())std::cout << std::endl << p << std::endl;
+
+                if(!p.isNull()){
+                        std::cout << std::endl << p << std::endl;
+                        Propiedades* prop = propiedadesCntl.searchByPropietario(p);
+                        std::cout << std::endl << "Propiedades: " << propiedadesCntl.getLastCont() << std::endl;
+                        for(int i=0; i < propiedadesCntl.getLastCont();i++){
+                            std::cout << prop[i] << std::endl << std::endl;
+                        }
+                }
                 else std::cout << std::endl << "No se encontro" << std::endl;}
                 break;
             case 4:
@@ -97,11 +107,11 @@ void Menu_Propietarios()
 }
 
 
-
 void Menu_Propiedades()
 {
   short int opc;
     PropiedadesController pController;
+    DifuntosController difuntosCtl;
     do{
         system("cls");
         std::cout << "--- Sistema Panteon --" << std::endl << std::endl;
@@ -115,6 +125,7 @@ void Menu_Propiedades()
         std::cout << "[10]Salir" << std::endl;
         std::cout << "Seleccione una opcion: ";
         std::cin >> opc;
+        std::cin.ignore(100,'\n');
         switch(opc){
             case 1:
                 pController.print();
@@ -125,10 +136,19 @@ void Menu_Propiedades()
                 break;
             case 3:{
                 int N_propiedad;
-                std::cout << std::endl << "Introduzca en numero de la propiedad buscar"<<std::endl;
+                std::cout << std::endl << "Introduzca el numero de la propiedad buscar: ";
                 std::cin >> N_propiedad;
                 Propiedades p = pController.searchN_propiedad(N_propiedad);
-                if(!p.isNull())std::cout << std::endl << p << std::endl;
+                if(!p.isNull()){
+                        std::cout << std::endl << p << std::endl;
+                        std::cout << std::endl << "Propietario: " << std::endl;
+                        std::cout << p.getPropietario() << std::endl;
+                        Difuntos* difuntos = difuntosCtl.searchByPropiedad(p);
+                        std::cout << std::endl << "Difuntos: " << std::endl;
+                        for(int i=0; i < difuntosCtl.getLastCont();i++){
+                            std::cout << difuntos[i] << std::endl << std::endl;
+                        }
+                }
                 else std::cout << std::endl << "No se encontro" << std::endl;}
                 break;
             case 4:
@@ -161,6 +181,7 @@ short int opc;
         std::cout << "[10]Salir" << std::endl;
         std::cout << "Seleccione una opcion: ";
         std::cin >> opc;
+        std::cin.ignore(100,'\n');
         switch(opc){
             case 1:
                 pController.print();
@@ -171,10 +192,14 @@ short int opc;
                 break;
             case 3:{
                 int id;
-                std::cout << std::endl << "Introduzca en numero de la propiedad buscar"<<std::endl;
+                std::cout << std::endl << "Introduzca el ID del difunto a buscar: "<<std::endl;
                 std::cin >> id;
                 Difuntos p = pController.searchID(id);
-                if(!p.isNull())std::cout << std::endl << p << std::endl;
+                if(!p.isNull()){
+                        std::cout << std::endl << p << std::endl;
+                        std::cout << std::endl << "Propiedad: " << std::endl;
+                        std::cout << p.getPropiedad() << std::endl;
+                }
                 else std::cout << std::endl << "No se encontro" << std::endl;}
                 break;
             case 4:

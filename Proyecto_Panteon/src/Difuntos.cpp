@@ -3,7 +3,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <typeinfo>
+#include <Propiedades.h>
+#include <PropiedadesController.h>
+#include <DifuntosController.h>
 
 
 Difuntos::Difuntos()
@@ -16,43 +18,70 @@ Difuntos::~Difuntos()
     //dtor
 }
 
-void Difuntos::setFecha(const char* fecha)
-{
-    strcpy(this->Fecha,fecha);
-}
-
-void Difuntos::setID(int id)
-{
-    this->ID=id;
-}
-
-void Difuntos::setNombre(const char* nombre)
-{
-   strcpy(this->Nombre,nombre);
+void Difuntos::setFecha(const char* fecha){strcpy(this->Fecha,fecha);}
+void Difuntos::setID(int id){this->ID=id;}
+void Difuntos::setNombre(const char* nombre){strcpy(this->Nombre,nombre);}
+void Difuntos::setPropiedad(Propiedades p){this->propiedad = p;}
+void Difuntos::setPropiedad(int id){
+    PropiedadesController controller;
+    this->propiedad = controller.searchN_propiedad(id);
 }
 
 char* Difuntos::getNombre(){return this->Nombre;}
 char* Difuntos::getFecha(){return this->Fecha;}
 int Difuntos::getID(){return this->ID;}
+Propiedades Difuntos::getPropiedad(){return this->propiedad;}
 
 std::ostream& operator<< (std::ostream& os, const Difuntos& p)
 {
-    os << "Nombre: " << p.Nombre <<
-    std::endl << "ID: " << p.ID <<
+    os << "ID: " << p.ID <<
+    std::endl << "Nombre: " << p.Nombre <<
     std::endl << "Fecha de difuncion: " << p.Fecha;
     return os;
 }
 
-std::istream& operator>> (std::istream& is, Difuntos& p)
+std::istream& operator>> (std::istream& is, Difuntos& d)
 {
+    int idPropiedad;
+    PropiedadesController propiedadesCtl;
+    DifuntosController difuntosCtl;
+    Propiedades p;
+    Difuntos test;
+    do{
+        std::cout << "Introduzca ID: ";
+        std::cin >> d.ID;
+        test= difuntosCtl.searchID(d.ID);
+        if (std::cin.fail()){
+            std::cin.clear();
+            return is;
+        }
+        if(!test.isNull())std::cout << "\n**Error: ID existente**\n\n";
+    }while(!test.isNull());
+
     std::cin.ignore(100,'\n');
     std::cout << "Introduzca el Nombre: ";
-    std::cin.getline(p.Nombre,sizeof(p.Nombre));
-    std::cout << "Introduzca ID: ";
-    std::cin >> p.ID;
-    std::cin.ignore(100,'\n');
+    std::cin.getline(d.Nombre,sizeof(d.Nombre));
     std::cout << "Introduzca la fecha de difuncion (dd-mm-aa):";
-    std::cin.getline(p.Fecha,sizeof(p.Fecha));
+    std::cin.getline(d.Fecha,sizeof(d.Fecha));
+    do{
+        std::cout << "Introduzca el numero de la propiedad: ";
+        std::cin >> idPropiedad;
+        if (std::cin.fail()){
+            std::cin.clear();
+            return is;
+        }
+        p = propiedadesCtl.searchN_propiedad(idPropiedad);
+        difuntosCtl.searchByPropiedad(p);
+        if(p.getPredial()>0)
+            std::cout << "\n**Error: Presenta adeudo en predial**\n\n";
+        else if(difuntosCtl.getLastCont()>=p.getLimite_personas()){
+            std::cout << "\n**Error: La propiedad seleccionada esta llena**\n\n";
+        }else{
+            d.propiedad = p;
+            break;
+        }
+    }while(true);
+    std::cin.ignore(100,'\n');
     return is;
 }
 
@@ -66,6 +95,9 @@ char* Difuntos::_write()
     strcat(data,aux);
     strcat(data,"|");
     strcat(data,this->Fecha);
+    strcat(data,"|");
+    itoa(this->propiedad.getN_propiedad(),aux,10);
+    strcat(data,aux);
     strcat(data,"\n");
     return data;
 }
@@ -73,6 +105,7 @@ char* Difuntos::_write()
 void Difuntos::_read(char info[])
 {
     char* data;
+    int id;
 
     data = strtok(info,"|");
     strcpy(this->Nombre,data);
@@ -82,6 +115,10 @@ void Difuntos::_read(char info[])
 
     data = strtok(NULL,"|");
     strcpy(this->Fecha,data);
+
+    data = strtok(NULL,"|");
+    id = atoi(data);
+    this->setPropiedad(id);
 }
 
 bool Difuntos::isNull()
@@ -91,13 +128,6 @@ bool Difuntos::isNull()
 }
 
 
-
-
-
-
-
-
-
-
-
-
+bool Difuntos::operator==(Difuntos d){
+    return(this->ID==d.ID);
+}
