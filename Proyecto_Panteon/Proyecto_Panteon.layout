@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
-	<ActiveTarget name="Debug" />
-	<File name="include\PropietariosController.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<ActiveTarget name="Release" />
+	<File name="src\DifuntosController.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="93" topLine="0" />
+			<Cursor1 position="2680" topLine="85" />
+		</Cursor>
+		<Folding>
+			<Collapse line="12" />
+		</Folding>
+	</File>
+	<File name="src\Propiedades.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1814" topLine="37" />
 		</Cursor>
 	</File>
-	<File name="include\Propiedades.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\PropiedadesController.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6100" topLine="193" />
+		</Cursor>
+	</File>
+	<File name="src\Difuntos.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2480" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="include\PropietariosController.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="424" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\PropietariosController.cpp" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4233" topLine="95" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="12" />
+			<Collapse line="16" />
+			<Collapse line="43" />
+		</Folding>
+	</File>
+	<File name="include\Propiedades.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="962" topLine="16" />
 		</Cursor>
@@ -24,31 +58,21 @@
 			<Collapse line="23" />
 			<Collapse line="26" />
 			<Collapse line="29" />
-			<Collapse line="38" />
-			<Collapse line="47" />
-			<Collapse line="63" />
-			<Collapse line="80" />
-			<Collapse line="99" />
-			<Collapse line="104" />
-			<Collapse line="113" />
-		</Folding>
-	</File>
-	<File name="include\PropiedadesController.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="402" topLine="2" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2882" topLine="45" />
-		</Cursor>
-		<Folding>
-			<Collapse line="17" />
 		</Folding>
 	</File>
 	<File name="include\Difuntos.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="651" topLine="0" />
+			<Cursor1 position="760" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\DifuntosController.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="498" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\PropiedadesController.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="569" topLine="2" />
 		</Cursor>
 	</File>
 	<File name="include\Propietarios.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -56,39 +80,15 @@
 			<Cursor1 position="782" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="src\DifuntosController.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="94" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Propiedades.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3841" topLine="106" />
-		</Cursor>
-	</File>
-	<File name="src\Difuntos.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="963" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\PropiedadesController.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6119" topLine="69" />
+			<Cursor1 position="6521" topLine="4" />
 		</Cursor>
 		<Folding>
-			<Collapse line="73" />
-			<Collapse line="82" />
-		</Folding>
-	</File>
-	<File name="src\PropietariosController.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2680" topLine="36" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="12" />
-			<Collapse line="16" />
-			<Collapse line="43" />
+			<Collapse line="17" />
+			<Collapse line="54" />
+			<Collapse line="110" />
+			<Collapse line="167" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>
