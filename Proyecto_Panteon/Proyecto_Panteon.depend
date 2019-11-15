@@ -58,7 +58,7 @@
 	<stdlib.h>
 	<typeinfo>
 
-1573773680 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
+1573776442 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propietarioscontroller.cpp
 	"PropietariosController.h"
 	"fstream"
 	"iomanip"
@@ -234,7 +234,7 @@
 	<PropietariosController.h>
 	<PropiedadesController.h>
 
-1573773358 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propiedadescontroller.cpp
+1573774030 source:c:\users\kevin-desktop\google drive\cucei\segundo semestre\programacion\poyecto seminario programacion\proyecto_panteon\src\propiedadescontroller.cpp
 	"PropiedadesController.h"
 	"fstream"
 	"iomanip"

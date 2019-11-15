@@ -118,10 +118,9 @@ void PropietariosController::update(){
     std::cout << "\n\nElemento seleccionado: \n" << p;
     std::cout << "\n-- Seleccione la propiedad a actualizar --\n";
     std::cout << "[1]Nombre" << std::endl;
-    std::cout << "[2]CURP" << std::endl;
-    std::cout << "[3]Domicilio" << std::endl;
-    std::cout << "[4]Telefono" << std::endl;
-    std::cout << "[5]Edad" << std::endl;
+    std::cout << "[2]Domicilio" << std::endl;
+    std::cout << "[3]Telefono" << std::endl;
+    std::cout << "[4]Edad" << std::endl;
     std::cout << "[0]Salir" << std::endl;
     std::cout << "Opcion: ";
     std::cin >> opc;
@@ -134,21 +133,16 @@ void PropietariosController::update(){
             p.setNombre(cadena);
             break;
         case 2:
-            std::cout << "Introduzca la nueva CURP: ";
-            std::cin.getline(cadena,sizeof(cadena));
-            p.setCurp(cadena);
-            break;
-        case 3:
             std::cout << "Introduzca el nuevo Domicilio: ";
             std::cin.getline(cadena,sizeof(cadena));
             p.setDomicilio(cadena);
             break;
-        case 4:
+        case 3:
             std::cout << "Introduzca el nuevo Telefono: ";
             std::cin.getline(cadena,sizeof(char[11]));
             p.setTelefono(cadena);
             break;
-        case 5:
+        case 4:
             std::cout << "Introduzca la nueva Edad: ";
             std::cin >> edad;
             p.setEdad(edad);
